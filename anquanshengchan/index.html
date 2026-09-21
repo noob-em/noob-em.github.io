@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="安全生产月演讲稿大全，提供专业、实用的安全生产主题演讲稿模板与范文，涵盖企业安全、校园安全、社区安全等多个领域，助力您顺利完成演讲活动。">
+    <meta name="keywords" content="安全生产月演讲稿,演讲稿模板,安全生产演讲,安全月活动方案">
+    <title>安全生产月演讲稿-专业范文模板与写作指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --primary-dark: #c1121f;
+            --secondary-color: #457b9d;
+            --bg-color: #f8f9fa;
+            --text-main: #1d3557;
+            --text-secondary: #6c757d;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 8px;
+            border-radius: 50px;
+            display: inline-flex;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .search-box input {
+            border: none;
+            flex: 1;
+            padding: 12px 20px;
+            font-size: 1rem;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Category Grid */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            position: relative;
+            padding-left: 16px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .category-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .category-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Article List */
+        .article-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .article-tag {
+            background: #eef2ff;
+            color: var(--secondary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 15px 15px 0;
+            display: inline-block;
+        }
+
+        .article-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Writing Guide Section */
+        .guide-section {
+            background: white;
+            padding: 50px;
+            border-radius: var(--border-radius);
+            margin-bottom: 60px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .guide-item h3 {
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .guide-item ol {
+            margin-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        .guide-item li {
+            margin-bottom: 10px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 10px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background: #fafafa;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px; /* Approximate max height */
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background: #1d3557;
+            color: white;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #a8dadc;
+            font-size: 0.95rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #a8dadc;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <span>安</span>全演讲稿库
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#templates">演讲稿模板</a></li>
+                <li><a href="#guide">写作指南</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>安全生产月演讲稿</h1>
+    <p>为您提供高质量、结构完整的安全生产主题演讲稿资源，助您在安全生产月活动中传递安全理念，强化红线意识。</p>
+    <div class="search-box">
+        <input type="text" placeholder="搜索演讲稿关键词，如：责任、隐患、防范...">
+        <button>搜索</button>
+    </div>
+</section>
+
+<main class="container">
+    
+    <!-- Categories -->
+    <section id="templates">
+        <h2 class="section-title">分类模板</h2>
+        <div class="categories">
+            <article class="category-card">
+                <span class="category-icon">🏭</span>
+                <h3>企业生产安全</h3>
+                <p>针对工厂车间、机械操作等场景的专业演讲稿，强调规范操作与风险防范。</p>
+            </article>
+            <article class="category-card">
+                <span class="category-icon">🚗</span>
+                <h3>交通安全</h3>
+                <p>面向驾驶员、通勤族的交通安全宣传演讲，聚焦“一盔一带”与拒绝酒驾。</p>
+            </article>
+            <article class="category-card">
+                <span class="category-icon">🏢</span>
+                <h3>建筑施工安全</h3>
+                <p>涵盖高处作业、临时用电等建筑领域核心风险点的演讲素材。</p>
+            </article>
+            <article class="category-card">
+                <span class="category-icon">💡</span>
+                <h3>消防安全</h3>
+                <p>强调防火意识、逃生技能及消防器材使用的专题演讲。</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section>
+        <h2 class="section-title">精选演讲稿范文</h2>
+        <div class="article-list">
+            <!-- Article 1 -->
+            <article class="article-card">
+                <span class="article-tag">通用版</span>
+                <div class="article-content">
+                    <h3 class="article-title"><a href="#">筑牢安全防线，守护生命之花——安全生产月主题演讲</a></h3>
+                    <p class="article-excerpt">安全是企业发展的基石，是家庭幸福的保障。本文通过深刻剖析“隐患就是事故”的内涵，呼吁全员树立底线思维，从自身做起，杜绝违章操作，共同构建本质安全型环境。</p>
+                    <div class="article-footer">
+                        <span>2023-06-01</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <span class="article-tag">企业版</span>
+                <div class="article-content">
+                    <h3 class="article-title"><a href="#">责任重于泰山：企业安全生产主体责任落实演讲稿</a></h3>
+                    <p class="article-excerpt">作为企业员工，我们不仅是生产力的创造者，更是安全的守护者。本篇演讲稿重点阐述了“党政同责、一岗双责”的重要性，强调了管理者与一线员工在安全链条中的共同责任。</p>
+                    <div class="article-footer">
+                        <span>2023-06-05</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <span class="article-tag">校园版</span>
+                <div class="article-content">
+                    <h3 class="article-title"><a href="#">平安校园，从我做起：学生安全主题演讲</a></h3>
+                    <p class="article-excerpt">校园安全关乎每一个孩子的未来。文章从防溺水、防欺凌、交通安全等多个维度，引导同学们提高自我保护意识，学会识别危险，做自己的首席安全官。</p>
+                    <div class="article-footer">
+                        <span>2023-06-10</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="article-card">
+                <span class="article-tag">家庭版</span>
+                <div class="article-content">
+                    <h3 class="article-title"><a href="#">为了家人的微笑：家庭幸福与安全生产演讲</a></h3>
+                    <p class="article-excerpt">每一次平安回家，都是对家人最深情的告白。通过讲述安全事故对家庭破碎的残酷现实，唤醒听众对安全工作的敬畏之心，将安全意识融入血脉。</p>
+                    <div class="article-footer">
+                        <span>2023-06-12</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Writing Guide -->
+    <section id="guide">
+        <h2 class="section-title">演讲稿写作指南</h2>
+        <div class="guide-section">
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <h3>1. 明确演讲主题与受众</h3>
+                    <p>在动笔前，首先确定演讲的核心观点（如：遵章守纪、隐患排查、应急处置）以及听众群体（一线工人、学生、管理人员）。不同的受众需要不同的语言风格和切入点。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>2. 开头吸引注意力</h3>
+                    <p>一个好的开头能迅速抓住听众。可以使用数据、案例、提问或名言警句。例如：“据统计，90%的安全事故源于人的不安全行为……”</p>
+                </div>
+                <div class="guide-item">
+                    <h3>3. 主体结构清晰</h3>
+                    <p>建议采用“提出问题-分析问题-解决问题”的逻辑结构。分析原因时要深入，提出建议时要具体、可操作。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>4. 结尾升华情感</h3>
+                    <p>结尾要总结全文，发出号召，并最好能引起情感共鸣，让听众在听完演讲后产生“我要行动”的冲动。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <h2 class="section-title">常见问题解答</h2>
+        <div class="faq-item">
+            <div class="faq-question">安全生产月演讲稿通常需要多长时间？</div>
+            <div class="faq-answer">
+                一般建议演讲时长在3到8分钟之间。短小精悍的演讲更容易控制节奏，重点突出。如果是大型会议，通常在5-7分钟为宜。
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">如何让演讲稿更有感染力？</div>
+            <div class="faq-answer">
+                除了逻辑清晰，运用排比句增强气势，引用真实的惨痛案例触动人心，以及适当加入互动环节，都能有效提升演讲的感染力和说服力。
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">没有演讲经验，可以直接使用这些模板吗？</div>
+            <div class="faq-answer">
+                可以。本站提供的模板结构完整，您只需根据自己的具体行业和岗位特点，替换其中的关键词和具体案例，稍作修改即可使用。
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-col">
+            <h4>关于我们</h4>
+            <p style="color: #a8dadc; font-size: 0.9rem; line-height: 1.6;">
+                专注于为企事业单位、学校及社区提供高质量的安全教育素材，致力于推广安全生产文化，减少事故发生。
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>快速链接</h4>
+            <ul>
+                <li><a href="#">最新通知</a></li>
+                <li><a href="#">演讲技巧</a></li>
+                <li><a href="#">安全知识库</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>资源分类</h4>
+            <ul>
+                <li><a href="#">企业安全</a></li>
+                <li><a href="#">校园安全</a></li>
+                <li><a href="#">交通安全</a></li>
+                <li><a href="#">消防安全</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2023 安全演讲稿库. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    // Simple FAQ Toggle Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

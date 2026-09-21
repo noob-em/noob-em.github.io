@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UC浏览器官方下载中心，提供安卓、iOS及PC版本下载。极速浏览、视频下载、省流量模式及智能广告过滤，安全可靠的移动浏览器体验。">
+    <meta name="keywords" content="uc浏览器下载,uc浏览器,安卓浏览器,手机浏览器,免费下载">
+    <title>uc浏览器下载-极速省流与智能广告过滤的官方下载中心</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b00;
+            --primary-hover: #e65100;
+            --secondary-bg: #f5f7fa;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --border-color: #e1e4e8;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-nav {
+            padding: 8px 20px;
+            background: var(--text-main);
+            color: var(--white) !important;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-nav:hover {
+            background: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5eb 0%, #ffffff 100%);
+            padding: 80px 0 100px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255, 107, 0, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .hero-title span {
+            color: var(--primary-color);
+        }
+
+        .hero-desc {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 16px rgba(255, 107, 0, 0.3);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn-download:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover img {
+            transform: perspective(1000px) rotateY(0) rotateX(0);
+        }
+
+        /* Features Grid */
+        .features {
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: #fff5eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .feature-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Platform Section */
+        .platforms {
+            background: var(--secondary-bg);
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .platform-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .platform-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .platform-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .platform-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .version-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .version-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: var(--secondary-bg);
+            border-radius: 6px;
+        }
+
+        .version-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .version-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .version-number {
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .btn-download-sm {
+            background: var(--text-main);
+            color: var(--white);
+        }
+
+        /* Safety Notice */
+        .safety {
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            background: #fffaf0;
+        }
+
+        .safety-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .safety-icon {
+            font-size: 2rem;
+            color: #28a745;
+        }
+
+        .safety-text strong {
+            color: #28a745;
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--white);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            display: none;
+            padding-left: 10px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-desc {
+                margin: 0 auto 30px;
+            }
+
+            .cta-group {
+                justify-content: center;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#ff6b00"/>
+                    <path d="M8 12C8 14.21 9.79 16 12 16C14.21 16 16 14.21 16 12C16 9.79 14.21 8 12 8C9.79 8 8 9.79 8 12Z" fill="#ff6b00"/>
+                </svg>
+                <span>UC浏览器下载</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#features">核心功能</a>
+                <a href="#platforms">版本下载</a>
+                <a href="#faq">常见问题</a>
+                <a href="#safety" class="btn-nav">安全下载</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">官方推荐</span>
+                    <h1 class="hero-title">UC浏览器下载<br><span>极速省流</span>与智能广告过滤</h1>
+                    <p class="hero-desc">专为移动端优化的浏览器，支持视频极速下载、网页省流模式及智能广告拦截，让您的网络体验更流畅、更安全。</p>
+                    <div class="cta-group">
+                        <a href="#platforms" class="btn-download">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            立即下载
+                        </a>
+                        <a href="#features" class="btn-outline">
+                            了解功能
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/ucbrowserui/600/400.jpg" alt="UC浏览器界面展示" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">为什么选择UC浏览器？</h2>
+                    <p class="section-desc">不仅仅是浏览，更是智能化的网络助手。我们为您解决流量焦虑，提升浏览效率。</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path><path d="m4.93 4.93 14.14 14.14M19.07 4.93 4.93 19.07"></path></svg>
+                        </div>
+                        <h3 class="feature-title">省流量模式</h3>
+                        <p class="feature-text">采用独家压缩技术，为您节省高达85%的流量，让您在4G/5G网络下也能畅快冲浪。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        </div>
+                        <h3 class="feature-title">视频极速下载</h3>
+                        <p class="feature-text">一键解析并下载各大视频平台的精彩片段，支持倍速播放和断点续传。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        </div>
+                        <h3 class="feature-title">智能广告过滤</h3>
+                        <p class="feature-text">内置强大的广告过滤引擎，自动屏蔽弹窗、悬浮广告，还您清爽的阅读环境。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="feature-title">隐私安全防护</h3>
+                        <p class="feature-text">隐私浏览模式，保护您的个人数据不被追踪，拒绝恶意软件和钓鱼网站。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Download Section -->
+        <section id="platforms" class="section platforms">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">多平台版本下载</h2>
+                    <p class="section-desc">支持安卓、iOS及PC端，适配各种设备需求。</p>
+                </div>
+                <div class="platform-grid">
+                    <!-- Android -->
+                    <div class="platform-card">
+                        <div class="platform-header">
+                            <img src="https://picsum.photos/seed/androidlogo/100/100.jpg" alt="Android Logo" class="platform-icon">
+                            <div class="platform-name">Android</div>
+                        </div>
+                        <div class="version-list">
+                            <div class="version-item">
+                                <div class="version-info">
+                                    <span class="version-tag">最新版</span>
+                                    <span class="version-number">v13.0.1.3000</span>
+                                </div>
+                                <a href="#" class="btn-sm btn-download-sm">下载APK</a>
+                            </div>
+                            <div class="version-item">
+                                <div class="version-info">
+                                    <span class="version-tag">历史版本</span>
+                                    <span class="version-number">v12.5.x</span>
+                                </div>
+                                <a href="#" class="btn-sm btn-download-sm">查看</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- iOS -->
+                    <div class="platform-card">
+                        <div class="platform-header">
+                            <img src="https://picsum.photos/seed/ioslogo/100/100.jpg" alt="iOS Logo" class="platform-icon">
+                            <div class="platform-name">iOS (iPhone/iPad)</div>
+                        </div>
+                        <div class="version-list">
+                            <div class="version-item">
+                                <div class="version-info">
+                                    <span class="version-tag">App Store</span>
+                                    <span class="version-number">App Store上架</span>
+                                </div>
+                                <a href="#" class="btn-sm btn-download-sm">前往下载</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PC -->
+                    <div class="platform-card">
+                        <div class="platform-header">
+                            <img src="https://picsum.photos/seed/windowslogo/100/100.jpg" alt="PC Logo" class="platform-icon">
+                            <div class="platform-name">PC版</div>
+                        </div>
+                        <div class="version-list">
+                            <div class="version-item">
+                                <div class="version-info">
+                                    <span class="version-tag">Windows</span>
+                                    <span class="version-number">适用于 Windows 10/11</span>
+                                </div>
+                                <a href="#" class="btn-sm btn-download-sm">下载安装包</a>
+                            </div>
+                            <div class="version-item">
+                                <div class="version-info">
+                                    <span class="version-tag">Mac</span>
+                                    <span class="version-number">适用于 macOS</span>
+                                </div>
+                                <a href="#" class="btn-sm btn-download-sm">下载安装包</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Notice -->
+        <section id="safety" class="section safety">
+            <div class="container">
+                <div class="safety-content">
+                    <div class="safety-icon">✓</div>
+                    <div class="safety-text">
+                        <strong>官方安全验证：</strong> 所有提供的下载链接均来自官方网站或官方合作渠道，经过安全扫描，确保无病毒、无木马、无捆绑软件，请放心下载。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题解答</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">UC浏览器占用手机内存大吗？</div>
+                    <div class="faq-answer">UC浏览器经过深度优化，安装包体积小，运行内存占用低。即使在老款安卓手机上也能保持流畅运行。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如何开启省流量模式？</div>
+                    <div class="faq-answer">在浏览器主页点击“设置”图标，选择“网络设置”或“省流模式”，开启后系统会自动压缩网页数据。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">下载的视频保存在哪里？</div>
+                    <div class="faq-answer">视频下载后会保存在您手机的“UC下载”或“视频”文件夹中，您可以在文件管理器中找到它们。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如何卸载UC浏览器？</div>
+                    <div class="faq-answer">在手机桌面长按UC浏览器图标，选择“卸载”即可。如需清除缓存，请进入设置中的“清除数据”选项。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>UC浏览器下载</h3>
+                    <p>致力于为用户提供更智能、更安全、更省流量的移动互联网体验。全球数亿用户的共同选择。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">功能介绍</a></li>
+                        <li><a href="#">版本下载</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持平台</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Android 下载</a></li>
+                        <li><a href="#">iOS 下载</a></li>
+                        <li><a href="#">PC 下载</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">商务合作</a></li>
+                        <li><a href="#">客服中心</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 UC浏览器下载中心. 保留所有权利. 本站为信息展示页面，非官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                  </html>

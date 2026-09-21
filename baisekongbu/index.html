@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="白色恐怖历史资料库 - 深度探讨台湾戒严时期的历史背景、重大案件、人物传记及学术研究。提供客观史料与历史反思，帮助理解那段复杂的历史时期。">
+    <meta name="keywords" content="白色恐怖, 戒严时期, 台湾历史, 历史案件, 政治受难者, 戒严令">
+    <title>白色恐怖 - 台湾戒严时期历史研究与史料档案</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-body: #f4f4f4;
+            --bg-card: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --text-light: #999999;
+            --primary: #2c3e50;
+            --accent: #8e44ad;
+            --border: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--border);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-sub);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSI+PHBhdGggZD0iTTAgMzhoNDB2MmgtNDB6Ii8+PHBhdGggZD0iTTAgMThoNDB2MmgtNDB6Ii8+PHBhdGggZD0iTTAgMjhoNDB2MmgtNDB6Ii8+PHBhdGggZD0iTTAgMThoNDB2MmgtNDB6Ii8+PC9zdmc+');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .hero-tag {
+            background: rgba(255,255,255,0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: -40px;
+            padding-bottom: 60px;
+        }
+
+        /* Featured Section */
+        .featured-section {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .article-card {
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 160px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .card-link:hover::after {
+            margin-left: 8px;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .case-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .case-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .case-name {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .case-desc {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            border-left: 2px solid var(--border);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .timeline-text {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #2c3e50;
+            color: white;
+            padding: 50px 0;
+            margin: 40px 0;
+        }
+
+        .quote-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-family: "Songti SC", "SimSun", serif;
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Archive Table */
+        .archive-section {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .archive-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .archive-table th, .archive-table td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .archive-table th {
+            background-color: #f9f9f9;
+            font-weight: 600;
+            color: var(--text-sub);
+        }
+
+        .archive-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-inner {
+                padding: 0 15px;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .archive-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">白色<span>档案</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#">历史概述</a></li>
+                    <li><a href="#">重大案件</a></li>
+                    <li><a href="#">受难者名录</a></li>
+                    <li><a href="#">学术研究</a></li>
+                    <li><a href="#">历史反思</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>回望历史，寻求真相</h1>
+            <p>致力于台湾戒严时期历史资料的整理、研究与展示，为后世提供客观、详实的历史见证。</p>
+            <div class="hero-tags">
+                <span class="hero-tag">戒严时期 (1949-1987)</span>
+                <span class="hero-tag">政治案件</span>
+                <span class="hero-tag">人权历史</span>
+                <span class="hero-tag">转型正义</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-grid">
+            <!-- Left Column -->
+            <div class="content-column">
+                
+                <section class="featured-section">
+                    <h2 class="section-title">历史档案与深度研究</h2>
+                    <div class="featured-grid">
+                        <article class="article-card">
+                            <img src="https://picsum.photos/seed/history1/400/250" alt="军事法庭场景示意" class="card-img">
+                            <div class="card-content">
+                                <div class="card-meta">历史概述</div>
+                                <h3 class="card-title">戒严体制下的司法运作与政治审判</h3>
+                                <p class="card-excerpt">解析戒严时期“动员戡乱时期临时条款”对司法独立的侵蚀，以及军事法庭在政治案件中的特殊地位。</p>
+                                <a href="#" class="card-link">阅读全文</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <img src="https://picsum.photos/seed/history2/400/250" alt="手写文件示意" class="card-img">
+                            <div class="card-content">
+                                <div class="card-meta">受难者故事</div>
+                                <h3 class="card-title">林义雄宅血案：从悬疑到历史定论</h3>
+                                <p class="card-excerpt">详细梳理林义雄家灭门惨案的调查过程、司法判决及其在白色恐怖时期政治氛围下的特殊意义。</p>
+                                <a href="#" class="card-link">阅读全文</a>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <img src="https://picsum.photos/seed/history3/400/250" alt="档案室示意" class="card-img">
+                            <div class="card-content">
+                                <div class="card-meta">史料整理</div>
+                                <h3 class="card-title">档案开放与历史还原：从“机密”到“公开”</h3>
+                                <p class="card-excerpt">探讨政府解密档案的进度，以及民间团体如何通过史料还原被掩盖的历史真相。</p>
+                                <a href="#" class="card-link">阅读全文</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="archive-section">
+                    <h2 class="section-title">历史时间轴</h2>
+                    <table class="archive-table">
+                        <thead>
+                            <tr>
+                                <th>年份</th>
+                                <th>事件/法令</th>
+                                <th>影响</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1949</td>
+                                <td>颁布《戒严令》</td>
+                                <td>台湾进入长达38年的戒严时期</td>
+                            </tr>
+                            <tr>
+                                <td>1950</td>
+                                <td>“白色恐怖”初期肃清</td>
+                                <td>大量知识分子与党外人士被捕</td>
+                            </tr>
+                            <tr>
+                                <td>1950</td>
+                                <td>《惩治叛乱条例》</td>
+                                <td>扩大政治犯定义，严刑峻法</td>
+                            </tr>
+                            <tr>
+                                <td>1979</td>
+                                <td>美丽岛事件</td>
+                                <td>台湾民主运动重要转折点</td>
+                            </tr>
+                            <tr>
+                                <td>1987</td>
+                                <td>解除戒严</td>
+                                <td>结束长达38年的威权统治</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="quote-section">
+                    <div class="quote-content">
+                        <p class="quote-text">“遗忘历史，就是背叛过去；正视历史，才能开创未来。”</p>
+                        <p class="quote-author">—— 历史反思录</p>
+                    </div>
+                </section>
+
+                <section class="featured-section">
+                    <h2 class="section-title">专题推荐</h2>
+                    <div class="featured-grid">
+                        <article class="article-card">
+                            <div class="card-content">
+                                <div class="card-meta">学术研究</div>
+                                <h3 class="card-title">戒严时期的文化控制与审查制度</h3>
+                                <p class="card-excerpt">探讨官方如何通过出版审查、媒体控制来塑造社会舆论。</p>
+                                <a href="#" class="card-link">阅读全文</a>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <div class="card-content">
+                                <div class="card-meta">人物传记</div>
+                                <h3 class="card-title">郑南榕与自由主义精神的抗争</h3>
+                                <p class="card-excerpt">记录郑南榕为争取言论自由而自焚的壮烈事迹及其深远影响。</p>
+                                <a href="#" class="card-link">阅读全文</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Column Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">主要政治案件</h3>
+                    <ul class="case-list">
+                        <li>
+                            <span class="case-name">江南案</span>
+                            <span class="case-desc">涉及美国籍华人作家江南被刺杀的政治阴谋。</span>
+                        </li>
+                        <li>
+                            <span class="case-name">高雄市党外选举罢免辅导委员会事件</span>
+                            <span class="case-desc">即“美丽岛事件”后续审判。</span>
+                        </li>
+                        <li>
+                            <span class="case-name">林宅血案</span>
+                            <span class="case-desc">林义雄母亲与双胞胎姐妹遇害案。</span>
+                        </li>
+                        <li>
+                            <span class="case-name">中坜事件</span>
+                            <span class="case-desc">抗议员警施暴引发的群众冲突。</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">历史年表</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-year">1950</span>
+                            <p class="timeline-text">开始大规模搜捕“匪谍”。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">1960</span>
+                            <p class="timeline-text">雷震组党失败，自由时报遭查封。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">1971</span>
+                            <p class="timeline-text">退出联合国，对外政策受挫。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">1980</span>
+                            <p class="timeline-text">林宅血案发生，社会舆论哗然。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">1986</span>
+                            <p class="timeline-text">民进党成立。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">相关资源</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="#">国家人权博物馆</a></li>
+                        <li><a href="#">戒严时期国家转型正义委员会</a></li>
+                        <li><a href="#">档案管理局解密档案查询</a></li>
+                        <li><a href="#">台湾大学口述历史数据库</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p style="font-size: 0.9rem; color: #95a5a6;">
+                        本站旨在收集、整理与展示关于台湾戒严时期（1949-1987）的历史资料，包括政治案件、受难者故事及学术研究。我们致力于客观呈现历史事实，促进社会对人权与法治的反思。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>内容分类</h4>
+                    <ul>
+                        <li><a href="#">历史概述</a></li>
+                        <li><a href="#">重大案件</a></li>
+                        <li><a href="#">受难者名录</a></li>
+                        <li><a href="#">影像史料</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">国家人权博物馆</a></li>
+                        <li><a href="#">台湾历史学会</a></li>
+                        <li><a href="#">中央研究院近代史研究所</a></li>
+                        <li><a href="#">戒严时期国家转型正义委员会</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱：contact@whiteterror-archive.org</li>
+                        <li>地址：历史资料研究部</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 白色档案历史研究网. All Rights Reserved. 本站内容仅供学术研究参考。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

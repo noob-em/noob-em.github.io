@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="鲍鱼养殖、选购指南、营养价值及烹饪做法大全。提供干鲍、鲜鲍鉴别方法，以及红烧、清蒸鲍鱼等经典食谱，助您掌握鲍鱼食用技巧。">
+    <meta name="keywords" content="鲍鱼,鲍鱼养殖,鲍鱼选购,鲍鱼做法,鲍鱼营养价值,干鲍,鲜鲍">
+    <title>鲍鱼-海鲜美食与选购烹饪指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0f4c3a;
+            --secondary-color: #e8a87c;
+            --accent-color: #c25e00;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 12px;
+            --container-width: 1200px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--accent-color);
+            color: white !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(15, 76, 58, 0.8), rgba(15, 76, 58, 0.6)), url('https://picsum.photos/seed/abalone/1600/600') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            background-color: #d6956a;
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .view-all {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Cards Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-box {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .guide-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .guide-list li:last-child {
+            border-bottom: none;
+        }
+
+        .guide-list h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .guide-list p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th {
+            background-color: #f9f9f9;
+            color: var(--primary-color);
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>鲍</span>鱼食刻
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#cooking">烹饪做法</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                    <li><a href="#nutrition">营养百科</a></li>
+                    <li><a href="#" class="nav-cta">社区问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>品味海洋珍馐</h1>
+                <p>从深海到餐桌，全方位了解鲍鱼养殖、挑选技巧与经典烹饪方法。探索这一滋补海鲜的独特风味与营养价值。</p>
+                <a href="#cooking" class="hero-btn">开始探索食谱</a>
+            </div>
+        </section>
+
+        <div class="container main-content">
+            <!-- Left Content -->
+            <div class="content-area">
+                
+                <!-- Cooking Section -->
+                <section id="cooking">
+                    <div class="section-header">
+                        <h2 class="section-title">经典烹饪做法</h2>
+                        <a href="#" class="view-all">查看更多食谱 &rarr;</a>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/abalone1/400/300" alt="清蒸鲍鱼" class="card-img">
+                            <div class="card-body">
+                                <span class="card-tag">清淡</span>
+                                <h3 class="card-title">清蒸鲍鱼</h3>
+                                <p class="card-excerpt">保留鲍鱼原汁原味，只需简单蒸制，淋上豉油，鲜嫩弹牙。</p>
+                                <a href="#" class="card-link">查看做法 &rarr;</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/abalone2/400/300" alt="红烧鲍鱼" class="card-img">
+                            <div class="card-body">
+                                <span class="card-tag">浓郁</span>
+                                <h3 class="card-title">红烧鲍鱼</h3>
+                                <p class="card-excerpt">色泽红亮，口感软糯。适合搭配五花肉或鸡爪同炖，滋味浓郁。</p>
+                                <a href="#" class="card-link">查看做法 &rarr;</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/abalone3/400/300" alt="鲍鱼炖鸡" class="card-img">
+                            <div class="card-body">
+                                <span class="card-tag">滋补</span>
+                                <h3 class="card-title">鲍鱼炖鸡</h3>
+                                <p class="card-excerpt">经典粤式汤品，汤色金黄，营养丰富，适合秋冬进补。</p>
+                                <a href="#" class="card-link">查看做法 &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Guide Section -->
+                <section id="guide">
+                    <div class="section-header">
+                        <h2 class="section-title">选购与处理指南</h2>
+                        <a href="#" class="view-all">更多技巧 &rarr;</a>
+                    </div>
+                    <div class="grid-3">
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/abalone4/400/300" alt="干鲍挑选" class="card-img">
+                            <div class="card-body">
+                                <span class="card-tag">干货</span>
+                                <h3 class="card-title">如何挑选干鲍</h3>
+                                <p class="card-excerpt">看光泽、摸手感、闻气味。正宗干鲍个头均匀，肉质厚实。</p>
+                                <a href="#" class="card-link">学习技巧 &rarr;</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/abalone5/400/300" alt="鲜鲍处理" class="card-img">
+                            <div class="card-body">
+                                <span class="card-tag">鲜品</span>
+                                <h3 class="card-title">鲜鲍鱼的清洗</h3>
+                                <p class="card-excerpt">去除内脏和黑膜，刷洗贝壳，简单焯水即可去腥。</p>
+                                <a href="#" class="card-link">学习技巧 &rarr;</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/abalone6/400/300" alt="保存方法" class="card-img">
+                            <div class="card-body">
+                                <span class="card-tag">保存</span>
+                                <h3 class="card-title">鲍鱼的保存方法</h3>
+                                <p class="card-excerpt">鲜鲍鱼冷藏需活养，冷冻需密封。干鲍鱼需放置于干燥处。</p>
+                                <a href="#" class="card-link">学习技巧 &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Comparison Table -->
+                <section id="types">
+                    <div class="section-header">
+                        <h2 class="section-title">常见鲍鱼品种对比</h2>
+                    </div>
+                    <div class="sidebar-box">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>品种</th>
+                                    <th>主要产地</th>
+                                    <th>口感特点</th>
+                                    <th>价格区间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>网鲍</strong></td>
+                                    <td>中国大连、日本</td>
+                                    <td>肉质结实，带小坑，有嚼劲</td>
+                                    <td>昂贵（特级）</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>吉品鲍</strong></td>
+                                    <td>中国大连、日本</td>
+                                    <td>个头大，中间凹陷，味甜</td>
+                                    <td>高（中高档）</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>窝麻鲍</strong></td>
+                                    <td>中国大连、日本</td>
+                                    <td>个头小，肉质爽脆，有弹性</td>
+                                    <td>中等</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>杂色鲍</strong></td>
+                                    <td>中国沿海</td>
+                                    <td>肉质较软，适合家常烹饪</td>
+                                    <td>亲民</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section id="faq">
+                    <div class="section-header">
+                        <h2 class="section-title">常见问题 (FAQ)</h2>
+                    </div>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <span class="faq-question">鲍鱼适合什么人群食用？</span>
+                            <p class="faq-answer">鲍鱼富含蛋白质和微量元素，适合体质虚弱、营养不良的人群食用，但高胆固醇患者应适量。</p>
+                        </div>
+                        <div class="faq-item">
+                            <span class="faq-question">鲍鱼和鱼翅哪个营养价值更高？</span>
+                            <p class="faq-answer">从现代营养学角度看，两者营养价值相当。鲍鱼更易消化吸收，且价格相对亲民，是更推荐的选择。</p>
+                        </div>
+                        <div class="faq-item">
+                            <span class="faq-question">干鲍怎么发泡最入味？</span>
+                            <p class="faq-answer">干鲍需要长时间发泡（通常24-48小时），建议使用冷水浸泡，中途换水，最后用高汤煨制。</p>
+                        </div>
+                        <div class="faq-item">
+                            <span class="faq-question">吃鲍鱼有什么禁忌？</span>
+                            <p class="faq-answer">鲍鱼不宜与某些寒凉食物（如苦瓜）大量同食，以免引起肠胃不适。过敏体质者需慎食。</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside>
+                <!-- Nutrition Info -->
+                <div class="sidebar-box" id="nutrition">
+                    <h3 class="sidebar-title">营养价值</h3>
+                    <p style="font-size:0.9rem; color:#666; margin-bottom:15px;">
+                        鲍鱼被誉为“海味之冠”，含有丰富的蛋白质、维生素A、钙、铁、碘等矿物质。
+                    </p>
+                    <ul style="font-size:0.9rem; color:#333;">
+                        <li style="margin-bottom:8px;">✓ 促进机体免疫</li>
+                        <li style="margin-bottom:8px;">✓ 调节血压血脂</li>
+                        <li style="margin-bottom:8px;">✓ 滋阴润燥明目</li>
+                        <li style="margin-bottom:8px;">✓ 补而不燥</li>
+                    </ul>
+                </div>
+
+                <!-- Quick Guide -->
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title">新手必读</h3>
+                    <ul class="guide-list">
+                        <li>
+                            <h4>1. 闻气味</h4>
+                            <p>新鲜鲍鱼有淡淡的海水味，无异味。</p>
+                        </li>
+                        <li>
+                            <h4>2. 看壳色</h4>
+                            <p>壳色深且有光泽，说明肉质饱满。</p>
+                        </li>
+                        <li>
+                            <h4>3. 辨真假</h4>
+                            <p>注意区分养殖鲍与野生鲍，野生鲍肉质更紧实。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ad Placeholder -->
+                <div class="sidebar-box" style="background-color: #eef2f3; text-align: center; padding: 30px 20px;">
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 10px;">推荐阅读</p>
+                    <h4 style="margin-bottom: 15px;">2024年鲍鱼养殖趋势</h4>
+                    <a href="#" style="color: var(--accent-color); font-weight: bold;">阅读报告 &rarr;</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>鲍鱼食刻</h3>
+                    <p>专注海鲜美食文化分享，为您提供最专业的鲍鱼选购、烹饪及营养知识指南。</p>
+                    <p>让每一位食客都能轻松享受来自深海的鲜美馈赠。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#cooking">烹饪大全</a></li>
+                        <li><a href="#guide">选购技巧</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>热门分类</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">干鲍系列</a></li>
+                        <li><a href="#">鲜鲍料理</a></li>
+                        <li><a href="#">鲍鱼汤品</a></li>
+                        <li><a href="#">海鲜干货</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <ul class="footer-links">
+                        <li>邮箱：contact@abalone-guide.com</li>
+                        <li>电话：400-123-4567</li>
+                        <li>地址：中国·海鲜美食城A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 鲍鱼食刻 - 海鲜美食与选购烹饪指南. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>

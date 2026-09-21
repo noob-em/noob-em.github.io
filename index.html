@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="咕泡学院 - 专注IT技术培训的在线教育平台，提供Java、大数据、人工智能、前端等核心课程，由资深架构师亲自授课，助力开发者职业成长。">
+    <meta name="keywords" content="咕泡学院,Java培训,大数据培训,人工智能,AI,在线课程,架构师培训">
+    <title>咕泡学院-资深架构师亲授的IT技术在线教育平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #f97316;
+            --text-main: #1f2937;
+            --text-light: #6b7280;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            height: var(--header-height);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: #dbeafe;
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-main);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        }
+
+        /* Stats */
+        .stats-bar {
+            background-color: var(--text-main);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #eff6ff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Courses Section */
+        .courses {
+            padding: 80px 0;
+            background-color: #f3f4f6;
+        }
+
+        .course-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            background-color: white;
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .course-cover {
+            height: 160px;
+            background-color: #e5e7eb;
+            position: relative;
+        }
+
+        .course-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .course-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .course-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-level {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .course-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .course-info {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #f3f4f6;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .course-price {
+            color: #ef4444;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Teacher Section */
+        .teachers {
+            padding: 80px 0;
+        }
+
+        .teacher-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .teacher-card {
+            text-align: center;
+        }
+
+        .teacher-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .teacher-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .teacher-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .teacher-title {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .teacher-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--primary-color);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-white {
+            background-color: white;
+            color: var(--primary-color);
+            border: none;
+        }
+
+        .btn-white:hover {
+            background-color: #f3f4f6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #d1d5db;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero p {
+                margin: 0 auto 32px;
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .teacher-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .header-actions .btn {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid, .course-grid, .teacher-list, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                <span>咕泡学院</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#">首页</a>
+                <a href="#">Java架构</a>
+                <a href="#">大数据</a>
+                <a href="#">人工智能</a>
+                <a href="#">实战项目</a>
+                <a href="#">社区论坛</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">免费试听</a>
+                <div class="mobile-menu-btn">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">技术驱动未来</span>
+                <h1>资深架构师亲授 <br><span>高薪技术成长之路</span></h1>
+                <p>咕泡学院专注于Java、大数据、人工智能等核心技术的深度培训。拒绝照本宣科，采用实战驱动教学，助你从入门到精通，快速胜任一线大厂开发岗位。</p>
+                <div style="display: flex; gap: 15px; justify-content: flex-start; flex-wrap: wrap;">
+                    <a href="#" class="btn btn-primary">查看最新课程</a>
+                    <a href="#" class="btn btn-outline">预约试听</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://picsum.photos/seed/tech1/600/400.jpg" alt="在线学习场景">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>10W+</h3>
+                <p>累计学员</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>精品课程</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>一线大厂讲师</p>
+            </div>
+            <div class="stat-item">
+                <h3>98%</h3>
+                <p>就业率</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择咕泡学院？</h2>
+            <p class="section-subtitle">我们不仅传授技术，更注重培养解决问题的思维能力和架构设计能力。</p>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>实战驱动</h3>
+                    <p>90%的内容基于真实企业项目案例开发，拒绝纸上谈兵，让你在实战中掌握核心技能。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>大咖亲授</h3>
+                    <p>讲师均来自一线互联网大厂（阿里、腾讯、字节等），拥有十年以上架构设计与实战经验。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>终身服务</h3>
+                    <p>加入学习社群，享受终身技术答疑服务，定期分享行业最新技术动态与内推机会。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="courses">
+        <div class="container">
+            <h2 class="section-title">热门技术课程</h2>
+            <div class="course-tabs">
+                <button class="tab-btn active">全部课程</button>
+                <button class="tab-btn">Java架构</button>
+                <button class="tab-btn">大数据</button>
+                <button class="tab-btn">AI人工智能</button>
+                <button class="tab-btn">前端开发</button>
+            </div>
+            <div class="course-grid">
+                <!-- Course 1 -->
+                <article class="course-card">
+                    <div class="course-cover">
+                        <img src="https://picsum.photos/seed/java/300/200.jpg" alt="Java架构师班">
+                        <span class="course-tag">热销</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-level">Java架构师班</div>
+                        <h3 class="course-title">Spring Cloud微服务架构实战与性能调优</h3>
+                        <div class="course-info">
+                            <span>120+课时</span>
+                            <span class="course-price">¥ 2999</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Course 2 -->
+                <article class="course-card">
+                    <div class="course-cover">
+                        <img src="https://picsum.photos/seed/hadoop/300/200.jpg" alt="大数据课程">
+                        <span class="course-tag">新课</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-level">大数据全栈</div>
+                        <h3 class="course-title">Hadoop大数据开发工程师进阶之路</h3>
+                        <div class="course-info">
+                            <span>80+课时</span>
+                            <span class="course-price">¥ 2499</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Course 3 -->
+                <article class="course-card">
+                    <div class="course-cover">
+                        <img src="https://picsum.photos/seed/ai/300/200.jpg" alt="AI课程">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-level">人工智能</div>
+                        <h3 class="course-title">Python深度学习与AI应用开发实战</h3>
+                        <div class="course-info">
+                            <span>100+课时</span>
+                            <span class="course-price">¥ 3299</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Course 4 -->
+                <article class="course-card">
+                    <div class="course-cover">
+                        <img src="https://picsum.photos/seed/mysql/300/200.jpg" alt="数据库课程">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-level">数据库</div>
+                        <h3 class="course-title">高并发MySQL性能优化与架构设计</h3>
+                        <div class="course-info">
+                            <span>50+课时</span>
+                            <span class="course-price">¥ 1299</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn btn-outline">查看全部课程</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers -->
+    <section class="teachers">
+        <div class="container">
+            <h2 class="section-title">名师团队</h2>
+            <p class="section-subtitle">由行业资深专家组成的教学团队，带你领略技术前沿。</p>
+            <div class="teacher-list">
+                <div class="teacher-card">
+                    <div class="teacher-avatar">
+                        <img src="https://picsum.photos/seed/teacher1/200/200.jpg" alt="林老师">
+                    </div>
+                    <h3 class="teacher-name">林老师</h3>
+                    <p class="teacher-title">前阿里P8架构师</p>
+                    <p class="teacher-desc">拥有15年Java开发经验，擅长微服务架构、高并发系统设计。</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">
+                        <img src="https://picsum.photos/seed/teacher2/200/200.jpg" alt="张老师">
+                    </div>
+                    <h3 class="teacher-name">张老师</h3>
+                    <p class="teacher-title">前腾讯T5专家</p>
+                    <p class="teacher-desc">大数据领域资深专家，精通Hadoop、Spark及数据仓库建设。</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">
+                        <img src="https://picsum.photos/seed/teacher3/200/200.jpg" alt="王老师">
+                    </div>
+                    <h3 class="teacher-name">王老师</h3>
+                    <p class="teacher-title">AI算法专家</p>
+                    <p class="teacher-desc">曾在硅谷知名AI实验室工作，专注于计算机视觉与NLP算法。</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">
+                        <img src="https://picsum.photos/seed/teacher4/200/200.jpg" alt="李老师">
+                    </div>
+                    <h3 class="teacher-name">李老师</h3>
+                    <p class="teacher-title">全栈开发专家</p>
+                    <p class="teacher-desc">React与Node.js技术布道师，擅长构建高性能Web应用。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>开启你的高薪技术之旅</h2>
+            <p>现在注册，即可免费领取《2024年Java面试真题集》与《企业级架构实战手册》。</p>
+            <a href="#" class="btn btn-white">立即免费领取资料</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>咕泡学院</h3>
+                    <p>致力于打造国内最实战、最专业的IT技术培训平台。让每一位开发者都能掌握核心技能，实现职业飞跃。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">学院简介</a></li>
+                        <li><a href="#">师资力量</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">合作机构</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>课程中心</h4>
+                    <ul>
+                        <li><a href="#">Java架构师</a></li>
+                        <li><a href="#">大数据开发</a></li>
+                        <li><a href="#">人工智能</a></li>
+                        <li><a href="#">前端开发</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助支持</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">学习计划</a></li>
+                        <li><a href="#">就业指导</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 咕泡学院 版权所有 | 京ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
